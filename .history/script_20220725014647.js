@@ -15,6 +15,11 @@ const try_again_btn_win = document.getElementById("try_again_btn_win");
 const try_again_btn_lose = document.getElementById("try_again_btn_lose");
 let target = Math.floor(Math.random() * 100 + 1);
 
+VanillaToasts.create({
+  title: "Message Title",
+  text: "Notification text",
+});
+
 console.log(target);
 // console.log(high_score);
 

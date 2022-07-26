@@ -18,6 +18,11 @@ let target = Math.floor(Math.random() * 100 + 1);
 console.log(target);
 // console.log(high_score);
 
+VanillaToasts.create({
+  title: "Message Title",
+  text: "Notification text",
+});
+
 check_btn.addEventListener("click", function () {
   let guess = +document.getElementById("guess").value;
   // console.log(guess);

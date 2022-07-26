@@ -18,6 +18,11 @@ let target = Math.floor(Math.random() * 100 + 1);
 console.log(target);
 // console.log(high_score);
 
+VanillaToasts.create({
+  title: "Message Title",
+  text: "Notification text",
+});
+
 check_btn.addEventListener("click", function () {
   let guess = +document.getElementById("guess").value;
   // console.log(guess);
@@ -37,6 +42,7 @@ check_btn.addEventListener("click", function () {
     score.textContent = score.textContent - 1;
     guess_text.textContent = "You can only enter numbers between 1 and 100";
   } else if (guess < target) {
+    VanillaToasts.setTimeout(toast.id, 2000);
     score.textContent = score.textContent - 1;
     guess_text.textContent = "Your guess is too low";
     let node = document.createElement("li");
